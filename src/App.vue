@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Misgender Me Not"/>
+    <StartScreen msg="Misgender Me Not"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StartScreen from './components/StartScreen.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    StartScreen
   }
 }
 </script>
