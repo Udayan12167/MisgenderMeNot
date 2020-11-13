@@ -5,11 +5,6 @@ JSON Sentence Schema
 ```json
 {
   "incorrect_sentence": "He is over there, turning in his homework.",
-  "incorrect_terms": [
-    "He",
-    "is",
-    "his"
-  ],
   "correct_sentence": "They are over there, turning in their homework.",
   "correct_terms": [
     "They",
@@ -28,13 +23,6 @@ JSON Sentence Schema
     "incorrect_sentence": {
       "type": "string"
     },
-    "incorrect_terms": {
-      "type": "array",
-      "items": 
-        {
-          "type": "string"
-        }
-    },
     "correct_sentence": {
       "type": "string"
     },
@@ -47,10 +35,7 @@ JSON Sentence Schema
     }
   },
   "required": [
-    "incorrect_sentence",
-    "incorrect_terms",
     "correct_sentence",
-    "correct_terms"
   ]
 }
 ```
