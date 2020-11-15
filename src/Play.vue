@@ -1,8 +1,6 @@
 <template>
     <div id="play">
-        <md-app md-mode="reveal">
-            <MenuBar title="Game 1"/>
-        </md-app>
+        <MenuBar title="Game 1"/>
     </div>
 </template>
 
