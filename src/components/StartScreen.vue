@@ -1,7 +1,7 @@
 <template>
   <div class="start">
     <h1>{{ msg }}</h1>
-      <md-button class="md-raised md-accent">Play</md-button>
+      <md-button class="md-raised md-accent" href="/play">Play</md-button>
   </div>
 </template>
 
