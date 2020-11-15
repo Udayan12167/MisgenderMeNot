@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Play from './Play.vue'
+import NotFound from './NotFound.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -10,7 +11,7 @@ Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
 
-const NotFound = { template: '<p>Page not found</p>' }
+
 
 const routes = {
   '/': App,
