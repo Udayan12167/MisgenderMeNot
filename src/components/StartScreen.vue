@@ -1,7 +1,10 @@
 <template>
   <div class="start">
+    <img alt="Vue logo" src="../assets/logo.png">
     <h1>{{ msg }}</h1>
-      <md-button class="md-raised md-accent" href="/play">Play</md-button>
+      <md-button class="md-raised md-accent">
+        <router-link to="/home/play">Play</router-link>
+      </md-button>
   </div>
 </template>
 
