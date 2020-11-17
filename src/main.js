@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Play from './Play.vue'
-import NotFound from './NotFound.vue'
+import Play from './components/Play.vue'
+import StartScreen from './components/StartScreen.vue'
+// import NotFound from './NotFound.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -12,21 +13,29 @@ Vue.use(VueMaterial)
 Vue.use(VueRouter)
 
 
-
-const routes = {
-  '/': App,
-  '/play': Play,
-}
+const router = new VueRouter({
+  routes: [
+    { path: '/', redirect: '/home' },
+    { path: '/home', component: App,
+      children: [
+        { path: '', component: StartScreen },
+        { path: 'play', component: Play }
+      ]
+    }
+  ]
+})
 
 new Vue({
   el: '#app',
-  data: {
-    currentRoute: window.location.pathname
+  template: `
+    <div id="app">
+      <router-view class="main"></router-view>
+    </div>
+  `,
+  components: {
+    App,
+    StartScreen,
+    Play
   },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound
-    }
-  },
-  render (h) { return h(this.ViewComponent) }
+  router
 })
