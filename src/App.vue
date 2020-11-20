@@ -1,7 +1,7 @@
 <template>
   <div class="parent">
-    <md-app md-mode="reveal">
-        <md-app-toolbar class="md-accent">
+    <md-app md-mode="reveal" style="min-height: 100vh;">
+        <md-app-toolbar class="md-primary">
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
@@ -20,7 +20,7 @@
             </md-list>
         </md-app-drawer>
         <md-app-content>
-          <router-view class="child"></router-view>
+          <router-view id="router-child"></router-view>
         </md-app-content>
     </md-app>
   </div>

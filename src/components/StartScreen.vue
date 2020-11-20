@@ -1,19 +1,20 @@
 <template>
-  <div class="start">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1>{{ msg }}</h1>
+  <div id="start"
+       class="md-layout md-alignment-center-center"
+       style="margin-top: 20vh;">
+    <div class="md-layout-item">
+      <img alt="Vue logo" src="../assets/logo.png">
+      <h1>Misgender Me Not</h1>
       <md-button class="md-raised md-accent">
         <router-link to="/home/play">Play</router-link>
       </md-button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'StartScreen',
-  props: {
-    msg: String
-  }
+  name: 'StartScreen'
 }
 </script>
 
