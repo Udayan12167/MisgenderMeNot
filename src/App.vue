@@ -19,7 +19,7 @@
                 </md-list-item>
             </md-list>
         </md-app-drawer>
-        <md-app-content>
+        <md-app-content md-theme="default" class="md-accent">
           <router-view id="router-child"></router-view>
         </md-app-content>
     </md-app>
@@ -35,12 +35,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #50ac7b;
+  color: #ffffff;
 }
 </style>

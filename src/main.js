@@ -7,6 +7,7 @@ import Select from './components/Select.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import './assets/theme.scss'
 import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false

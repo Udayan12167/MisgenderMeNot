@@ -5,7 +5,7 @@
     <div class="md-layout-item">
       <img alt="Vue logo" src="../assets/logo.png">
       <h1>Misgender Me Not</h1>
-      <md-button class="md-raised md-accent">
+      <md-button class="md-raised md-secondary">
         <router-link to="/home/play">Play</router-link>
       </md-button>
     </div>
@@ -33,5 +33,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.md-secondary {
+  background-color: #9C27B0 !important;
 }
 </style>
