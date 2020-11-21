@@ -3,8 +3,13 @@ import App from './App.vue'
 import Play from './components/Play.vue'
 import SentenceCorrect from './components/SentenceCorrect.vue'
 import StartScreen from './components/StartScreen.vue'
+<<<<<<< HEAD
 import Select from './components/Select.vue'
 // import NotFound from './NotFound.vue'
+=======
+import Resources from './components/Resources.vue'
+import NotFound from './components/NotFound.vue'
+>>>>>>> 0e9d899... add Resources page, adjust routing
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -34,9 +39,12 @@ const router = new VueRouter({
         { path: '', component: StartScreen },
         { path: 'play', component: Play },
         { path: 'game1', component: Select},
-        { path: 'game1/sentence/:id', name: 'SentenceCorrect', component: SentenceCorrect}
+        { path: 'game1/sentence/:id', name: 'SentenceCorrect', component: SentenceCorrect},
+        {path: 'resources', component: Resources},
+        { path: "*", component: NotFound }
       ]
-    }
+    },
+    { path: "*", redirect: '/home' }
   ]
 })
 
