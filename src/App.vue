@@ -5,7 +5,7 @@
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
-            <span class="md-title">Misgender Me Not</span>    
+            <span class="md-title">Misgender Me Not</span>
         </md-app-toolbar>
         <md-app-drawer :md-active.sync="menuVisible">
             <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
@@ -17,7 +17,7 @@
                       <router-link to="/home">Home</router-link>
                     </span>
                 </md-list-item>
-            </md-list>    
+            </md-list>
         </md-app-drawer>
         <md-app-content>
           <router-view class="child"></router-view>
@@ -41,6 +41,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #50ac7b;
 }
 </style>
