@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Play from './components/Play.vue'
+import SentenceCorrect from './components/SentenceCorrect.vue'
 import StartScreen from './components/StartScreen.vue'
 import Select from './components/Select.vue'
 // import NotFound from './NotFound.vue'
@@ -22,7 +23,8 @@ const router = new VueRouter({
       children: [
         { path: '', component: StartScreen },
         { path: 'play', component: Play },
-        {path: 'select', component: Select}
+        {path: 'select', component: Select},
+        { path: 'game1', component: SentenceCorrect}
       ]
     }
   ]

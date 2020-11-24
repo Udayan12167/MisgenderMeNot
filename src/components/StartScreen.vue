@@ -6,7 +6,7 @@
       <img alt="Vue logo" src="../assets/logo.png">
       <h1>Misgender Me Not</h1>
       <md-button class="md-raised md-secondary">
-        <router-link to="/home/play">Play</router-link>
+        <router-link to="/home/game1">Game 1</router-link>
       </md-button>
     </div>
   </div>
