@@ -1,0 +1,77 @@
+[
+  {
+    "incorrect_sentence": "He is over there, turning in his homework.",
+    "correct_sentence": "They are over there, turning in their homework.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She went to the waterpark with her friends yesterday.",
+    "correct_sentence": "They went to the waterpark with their friends yesterday.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She wandered into a strange Tiki bar on the edge of the small beach town.",
+    "correct_sentence": "They wandered into a strange Tiki bar on the edge of the small beach town.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "His hair is so long and lustrous, it must be all the grilled cheese sandwiches he eats.",
+    "correct_sentence": "Their hair is so long and lustrous, it must be all the grilled cheese sandwiches they eat.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She is always right, it is infuriating to be around her.",
+    "correct_sentence": "They are always right, it is infuriating to be around them.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "I checked on him ten minutes ago.",
+    "correct_sentence": "I checked on them ten minutes ago.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "They need to rent a room for they party.",
+    "correct_sentence": "They need to rent a room for their party.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "Fabio wrote him a long letter, but he didn't even read it.",
+    "correct_sentence": "Fabio wrote them a long letter, but they didn't even read it.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She always had an interesting perspective on why her world must be flat.",
+    "correct_sentence": "They always had an interesting perspective on why their world must be flat.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "His confidence would have been admirable if it wasn't for his stupidity.",
+    "correct_sentence": "Their confidence would have been admirable if it wasn't for their stupidity.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She spiked her hair green to support her iguana.",
+    "correct_sentence": "They spiked their hair green to support their iguana.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "He stomped on his fruit loops and thus became a cereal killer.",
+    "correct_sentence": "They stomped on their fruit loops and thus became a cereal killer.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "He ate the french fries knowing they would be his last meal.",
+    "correct_sentence": "They ate the french fries knowing they would be their last meal.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "As he waited for the shower to warm, he noticed that he could hear water change temperature.",
+    "correct_sentence": "As they waited for the shower to warm, they noticed that they could hear water change temperature.",
+    "pronouns": "they/them/theirs"
+  },
+  {
+    "incorrect_sentence": "She did nothing as the raccoon attacked her bag of food.",
+    "correct_sentence": "They did nothing as the raccoon attacked their bag of food.",
+    "pronouns": "they/them/theirs"
+  },
+]
