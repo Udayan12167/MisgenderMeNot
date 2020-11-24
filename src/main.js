@@ -23,8 +23,8 @@ const router = new VueRouter({
       children: [
         { path: '', component: StartScreen },
         { path: 'play', component: Play },
-        {path: 'select', component: Select},
-        { path: 'game1', component: SentenceCorrect}
+        { path: 'game1', component: Select},
+        { path: 'game1/sentence', component: SentenceCorrect}
       ]
     }
   ]

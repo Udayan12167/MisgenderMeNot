@@ -1,5 +1,5 @@
 <template>
-    <div class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
+    <div id="game1-config" class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
     <br>
       <h1 style="color: white;"> Game 1 </h1>
         <div id = "checkbox" style="width: 48%; color: #435760; float: left; background: #73bd95;">
@@ -40,8 +40,8 @@
       </div>
 <br><br>
       <div id = "start">
-          <md-button to="/home/play" class="md-raised md-accent" style="background-color: #9c27b0; font-size: 23px; min-height: 60px; min-width: 160px">
-            START
+          <md-button to="/home/play" class="md-raised md-secondary" style="font-size: 23px; min-height: 60px; min-width: 160px">
+            <router-link to="/home/game1/sentence">START</router-link>
           </md-button>
       </div>
 </div>
@@ -64,3 +64,10 @@ export default {
 
 }
 </script>
+
+<style scoped>
+.md-secondary {
+  background-color: #9C27B0 !important;
+  color: #ffffff !important;
+}
+</style>
