@@ -1,19 +1,20 @@
 <template>
-  <div class="start">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1>{{ msg }}</h1>
-      <md-button class="md-raised md-accent">
-        <router-link to="/home/play">Play</router-link>
+  <div id="start"
+       class="md-layout md-alignment-center-center"
+       style="margin-top: 20vh;">
+    <div class="md-layout-item">
+      <img alt="Vue logo" src="../assets/logo.png">
+      <h1>Misgender Me Not</h1>
+      <md-button class="md-raised md-secondary">
+        <router-link to="/home/game1">Game 1</router-link>
       </md-button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'StartScreen',
-  props: {
-    msg: String
-  }
+  name: 'StartScreen'
 }
 </script>
 
@@ -32,5 +33,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.md-secondary {
+  background-color: #9C27B0 !important;
 }
 </style>
