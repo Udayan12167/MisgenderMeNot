@@ -10,11 +10,10 @@
       </md-card>
       <md-divider></md-divider>
       <md-chip class="md-secondary">
-        <md-icon>favorite</md-icon>He/Him/His
+        <md-icon>favorite</md-icon>{{ correct_pronoun }}
       </md-chip>
     </div>
-    <div class="md-layout-item md-layout md-gutter md-size-66"
-         v-bind:style="rightColHeight">
+    <div class="md-layout-item md-layout md-gutter md-size-66">
       <div class="md-layout-item">
         <md-card class="md-gutter">
           <md-ripple>
@@ -22,7 +21,7 @@
               <div class="md-title">Fix the Sentence</div>
             </md-card-header>
             <md-card-content>
-              Sentence goes here
+              {{ incorrect_sentence }}
             </md-card-content>
           </md-ripple>
         </md-card>
@@ -43,22 +42,25 @@
 </template>
 
 <script>
+import SENTENCES from '../resources/sentences_game_1.json'
+
 export default {
   name: 'SentenceCorrect',
-  data: function () {
-        return {
-            rightColHeight: { },
-        }
-    },
-    methods: {
-        matchHeight() {
-            var heightString = this.$refs.leftCol.clientHeight + 'px';
-            this.rightColHeight = {'height': heightString}; 
-        }
-    },
-    mounted() {
-        this.matchHeight();
+  props: ['sentence_id'],
+  data: function() {
+    return {
+      incorrect_sentence: `Placeholder incorrect sentences`,
+      correct_pronoun: `They/Them/Their`
     }
+  },
+  mounted() {
+    console.log(this.sentence_id);
+    if (this.sentence_id !== undefined) {
+      this.incorrect_sentence = SENTENCES[this.sentence_id]['incorrect_sentence']
+      this.correct_pronoun = SENTENCES[this.sentence_id]['pronouns']
+      this.correct_sentence = SENTENCES[this.sentence_id]['correct_sentence']
+    }
+  }
 }
 </script>
 
@@ -85,7 +87,7 @@ a {
 }
 
 .md-card {
-  display: inline-block;
+  text-align: left;
   vertical-align: top;
 }
 </style>

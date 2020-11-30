@@ -41,7 +41,7 @@
 <br><br>
       <div id = "start">
           <md-button to="/home/play" class="md-raised md-secondary" style="font-size: 23px; min-height: 60px; min-width: 160px">
-            <router-link to="/home/game1/sentence">START</router-link>
+            <router-link :to="{ name: 'SentenceCorrect', params: { sentence_id: sentence_id } }">START</router-link>
           </md-button>
       </div>
 </div>
@@ -54,12 +54,12 @@
 export default {
     name: 'Select',
     data: function()  {
-    return {
+      return {
           counter: 0,
           checkedPronouns: [],
-          difficulty: 0
-          }
-
+          difficulty: 0,
+          sentence_id: 0
+      }
     }
 
 }
