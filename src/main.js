@@ -2,8 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import Play from './components/Play.vue'
 import StartScreen from './components/StartScreen.vue'
-import Resources from './components/Resources.vue'
-import NotFound from './components/NotFound.vue'
 import Select from './components/Select.vue'
 // import NotFound from './NotFound.vue'
 import VueMaterial from 'vue-material'
@@ -25,8 +23,6 @@ const router = new VueRouter({
         { path: 'play', component: Play },
         { path: 'game1', component: Select},
         { path: 'game1/sentence', component: SentenceCorrect}
-        {path: 'resources', component: Resources},
-        { path: "*", component: NotFound }
       ]
     },
     { path: "*", redirect: '/home' }
