@@ -5,7 +5,7 @@
     <div class="md-layout-item md-size-33" id="leftCol">
       <md-card>
         <md-card-media>
-          <img src="../assets/portrait_1.jpg" alt="Cover">
+          <img :src="imgSrc" alt="Cover"/>
         </md-card-media>
       </md-card>
       <md-divider></md-divider>
@@ -50,11 +50,18 @@ export default {
   data: function() {
     return {
       incorrect_sentence: `Placeholder incorrect sentences`,
-      correct_pronoun: `They/Them/Their`
+      correct_pronoun: `They/Them/Their`,
+      imgSrc: `/assets/portrait_1.jpg`
+    }
+  },
+  methods : {
+    randomImage : function(){
+      return `/assets/image-${Math.floor(Math.random() * (52 - 1) + 1)}.jpg`;
     }
   },
   mounted() {
     console.log(this.sentence_id);
+    this.imgSrc = this.randomImage()
     if (this.sentence_id !== undefined) {
       this.incorrect_sentence = SENTENCES[this.sentence_id]['incorrect_sentence']
       this.correct_pronoun = SENTENCES[this.sentence_id]['pronouns']

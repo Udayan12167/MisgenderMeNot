@@ -3,7 +3,7 @@
        class="md-layout md-alignment-center-center"
        style="margin-top: 20vh;">
     <div class="md-layout-item">
-      <img alt="Vue logo" src="../assets/logo.png">
+      <img alt="Vue logo" src="/assets/logo.png">
       <h1>Misgender Me Not</h1>
       <md-button class="md-raised md-secondary">
         <router-link to="/home/game1">Game 1</router-link>
