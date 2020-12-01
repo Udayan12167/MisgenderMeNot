@@ -20,7 +20,7 @@
             </md-list>
         </md-app-drawer>
         <md-app-content md-theme="default" class="md-accent">
-          <router-view id="router-child"></router-view>
+          <router-view id="router-child" :key="$route.fullPath"></router-view>
         </md-app-content>
     </md-app>
   </div>

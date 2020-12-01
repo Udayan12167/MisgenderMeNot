@@ -32,10 +32,7 @@ const router = new VueRouter({
         { path: '', component: StartScreen },
         { path: 'play', component: Play },
         { path: 'game1', component: Select},
-        { path: 'game1/sentence',
-          name: 'SentenceCorrect',
-          component: SentenceCorrect,
-          props: true}
+        { path: 'game1/sentence/:id', name: 'SentenceCorrect', component: SentenceCorrect}
       ]
     }
   ]

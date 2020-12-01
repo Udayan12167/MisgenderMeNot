@@ -40,9 +40,11 @@
       </div>
 <br><br>
       <div id = "start">
-          <md-button to="/home/play" class="md-raised md-secondary" style="font-size: 23px; min-height: 60px; min-width: 160px">
-            <router-link :to="{ name: 'SentenceCorrect', params: { sentence_id: sentence_id } }">START</router-link>
-          </md-button>
+          <router-link to="game1/sentence/0">
+            <md-button class="md-raised md-secondary" style="font-size: 23px; min-height: 60px; min-width: 160px">
+              START
+            </md-button>
+          </router-link>
       </div>
 </div>
 

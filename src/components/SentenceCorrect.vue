@@ -56,7 +56,9 @@
       <span class="md-display-1">{{ formattedTimeLeft }}</span>
     </div>
     <div class="md-layout-item md-size-14" v-if="completed">
-      <md-button class="md-secondary md-dense md-raised submit-btn" v-on:click="reload">Next <md-icon>keyboard_arrow_right</md-icon></md-button>
+      <router-link :to="`/home/game1/sentence/${(sentenceId+1)%15}`">
+        <md-button class="md-secondary md-dense md-raised submit-btn">Next <md-icon>keyboard_arrow_right</md-icon></md-button>
+      </router-link>
     </div>
   </div>
 </template>
@@ -66,16 +68,9 @@ import SENTENCES from '../resources/sentences_game_1.json'
 
 export default {
   name: 'SentenceCorrect',
-  props: {
-    'sentence_id': {
-      type: Number,
-      default() {
-        return 0;
-      }
-    }
-  },
   data: function() {
     return {
+      sentenceId: 0,
       incorrect_sentence: `Placeholder incorrect sentence`,
       correct_sentence: `Placeholder correct sentence`,
       correct_pronoun: `They/Them/Their`,
@@ -138,9 +133,6 @@ export default {
     }
   },
   computed: {
-    sentenceId() {
-      return Math.floor(Math.random() * 15)
-    },
     timeLeft() {
       return this.timeLimit - this.timePassed
     },
@@ -158,6 +150,7 @@ export default {
     }
   },
   mounted() {
+    this.sentenceId = parseInt(this.$route.params.id);
     console.log(this.sentenceId);
     this.imgSrc = this.randomImage();
     if (this.sentenceId !== undefined) {

@@ -5,9 +5,11 @@
     <div class="md-layout-item">
       <img alt="Vue logo" src="/assets/logo.png">
       <h1>Misgender Me Not</h1>
-      <md-button class="md-raised md-secondary">
-        <router-link to="/home/game1">Game 1</router-link>
-      </md-button>
+      <router-link to="/home/game1">
+        <md-button class="md-raised md-secondary">
+          Game 1
+        </md-button>
+      </router-link>
     </div>
   </div>
 </template>
