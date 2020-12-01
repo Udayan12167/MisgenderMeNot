@@ -6,7 +6,13 @@
       <h1></h1>
       <router-link to="/home/game1">
         <md-button class="md-raised md-secondary">
-          Game 1
+          <md-icon>play_circle_filled</md-icon> Game 1
+        </md-button>
+      </router-link>
+      <h4></h4>
+      <router-link to="/home/resources">
+        <md-button class="md-raised md-secondary">
+          <md-icon>article</md-icon> Resources
         </md-button>
       </router-link>
     </div>
