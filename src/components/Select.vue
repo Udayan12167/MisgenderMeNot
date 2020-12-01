@@ -1,7 +1,15 @@
 <template>
-    <div class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
+    <div id="game1-config" class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
     <br>
       <h1 style="color: white;"> Game 1 </h1>
+        <div id = "rules" style="background: #73bd95;color: #445760; font-size: 15px;">
+        <p>In this game, you will get the chance to practice using the correct pronouns.</p>
+
+
+        <p>You will have 30 seconds to fix the given sentence with the given pronouns. Type your answer in the text box and click ‘SUBMIT’. If you got the answer wrong, keep trying till the clock runs out!
+        </p>
+        <p>Tip: Make sure to include punctuation and check for spelling.</p>
+        </div>
         <div id = "checkbox" style="width: 48%; color: #435760; float: left; background: #73bd95;">
           <h2> Select the pronouns you want to practice: </h2>
           <input type="checkbox" id="He/Him/His" value="He/Him/His" v-model="checkedPronouns">
@@ -40,9 +48,11 @@
       </div>
 <br><br>
       <div id = "start">
-          <md-button to="/home/play" class="md-raised md-accent" style="background-color: #9c27b0; font-size: 23px; min-height: 60px; min-width: 160px">
-            START
-          </md-button>
+          <router-link to="game1/sentence/0">
+            <md-button class="md-raised md-secondary" style="font-size: 23px; min-height: 60px; min-width: 160px">
+              START
+            </md-button>
+          </router-link>
       </div>
 </div>
 
@@ -54,13 +64,20 @@
 export default {
     name: 'Select',
     data: function()  {
-    return {
+      return {
           counter: 0,
           checkedPronouns: [],
-          difficulty: 0
-          }
-
+          difficulty: 0,
+          sentence_id: 0
+      }
     }
 
 }
 </script>
+
+<style scoped>
+.md-secondary {
+  background-color: #9C27B0 !important;
+  color: #ffffff !important;
+}
+</style>
