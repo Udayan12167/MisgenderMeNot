@@ -3,6 +3,14 @@
     <br>
       <img class="center" alt="Vue logo" src="/assets/logo.png" style="height: 10vh;">
       <h1 class="md-display-2" style="color: white;">Pronoun Correction</h1>
+        <div id = "rules" style="background: #73bd95;color: #445760; font-size: 15px;">
+        <p>In this game, you will get the chance to practice using the correct pronouns.</p>
+
+
+        <p>You will have 30 seconds to fix the given sentence with the given pronouns. Type your answer in the text box and click ‘SUBMIT’. If you got the answer wrong, keep trying till the clock runs out!
+        </p>
+        <p>Tip: Make sure to include punctuation and check for spelling.</p>
+        </div>
         <div id = "checkbox" style="width: 48%; color: #435760; float: left; background: #73bd95;">
           <h2> Select the pronouns you want to practice: </h2>
           <input type="checkbox" id="He/Him/His" value="He/Him/His" v-model="checkedPronouns">
