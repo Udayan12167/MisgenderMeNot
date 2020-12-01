@@ -15,6 +15,14 @@ Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
 
+Vue.mixin({
+  data: function() {
+    return {
+      score: 0,
+      multiplier: 0
+    }
+  }
+})
 
 const router = new VueRouter({
   routes: [
