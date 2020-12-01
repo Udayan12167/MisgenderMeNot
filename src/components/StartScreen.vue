@@ -1,10 +1,9 @@
 <template>
   <div id="start"
-       class="md-layout md-alignment-center-center"
-       style="margin-top: 20vh;">
+       class="md-layout md-alignment-center-center">
     <div class="md-layout-item">
-      <img alt="Vue logo" src="/assets/logo.png">
-      <h1>Misgender Me Not</h1>
+      <img alt="Vue logo" src="/assets/logo.png" style="height: 30vh;">
+      <h1></h1>
       <router-link to="/home/game1">
         <md-button class="md-raised md-secondary">
           Game 1
@@ -39,5 +38,6 @@ a {
 
 .md-secondary {
   background-color: #9C27B0 !important;
+  color: #ffffff !important;
 }
 </style>

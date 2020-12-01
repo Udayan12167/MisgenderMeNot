@@ -93,6 +93,7 @@ export default {
       if (this.correct_sentence === this.input_sentence) {
         this.sentenceIcon = `thumb_up_alt`;
         this.sentenceIconColor = `green`;
+        this.$confetti.start();
         this.finishedCorrect();
       } else {
         this.sentenceIcon = `warning`;
@@ -103,6 +104,7 @@ export default {
       if (this.correct_sentence === this.input_sentence) {
         this.sentenceIcon = `thumb_up_alt`;
         this.sentenceIconColor = `green`;
+        this.$confetti.start();
       } else {
         this.sentenceIcon = `warning`;
         this.sentenceIconColor = `red`;
@@ -150,6 +152,7 @@ export default {
     }
   },
   mounted() {
+    this.$confetti.stop();
     this.sentenceId = parseInt(this.$route.params.id);
     console.log(this.sentenceId);
     this.imgSrc = this.randomImage();

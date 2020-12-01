@@ -10,10 +10,12 @@ import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 import './assets/theme.scss'
 import VueRouter from 'vue-router'
+import VueConfetti from 'vue-confetti'
 
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
+Vue.use(VueConfetti)
 
 Vue.mixin({
   data: function() {

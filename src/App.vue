@@ -20,7 +20,9 @@
             </md-list>
         </md-app-drawer>
         <md-app-content md-theme="default" class="md-accent">
-          <router-view id="router-child" :key="$route.fullPath"></router-view>
+          <transition :name="transitionName" mode="out-in">
+            <router-view id="router-child" :key="$route.fullPath"></router-view>
+          </transition>
         </md-app-content>
     </md-app>
   </div>
@@ -29,9 +31,12 @@
 <script>
 export default {
   name: 'App',
-  data: () => ({
-    menuVisible: false
-  })
+  data() {
+    return {
+      menuVisible: false,
+      transitionName: 'slide-fade'
+    }
+  }
 }
 </script>
 
@@ -42,5 +47,25 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
