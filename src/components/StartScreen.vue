@@ -6,7 +6,7 @@
       <h1></h1>
       <router-link to="/home/game1">
         <md-button class="md-raised md-secondary">
-          <md-icon>play_circle_filled</md-icon> Game 1
+          <md-icon>play_circle_filled</md-icon> Play Pronoun Correction
         </md-button>
       </router-link>
       <h4></h4>

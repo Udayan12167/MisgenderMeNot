@@ -1,7 +1,6 @@
 <template>
   <div id="start"
-       class="md-layout md-gutter md-alignment-center-center"
-       style="margin-top: 20vh;">
+       class="md-layout md-gutter md-alignment-center-center">
     <md-dialog :md-close-on-esc="false"
                :md-click-outside-to-close="false"
                :md-active.sync="showScore">
@@ -46,6 +45,19 @@
         </router-link>
       </md-dialog-actions>
     </md-dialog>
+    <div class="md-layout-item md-layout md-size-100 md-alignment-top-center banner"
+         style="height: 15vh;">
+      <div class="md-layout-item md-size-100"
+          style="margin-bottom: 1vh; text-align: center;">
+        <span class="md-display-2" style="color: white;">Pronoun Correction</span>
+      </div>
+      <div class="md-layout-item md-size-100"
+          style="text-align: center;">
+        <span class="md-headline">
+          Rewrite the sentence using the correct pronouns and grammar!
+        </span>
+      </div>
+    </div>  
     <div class="md-layout-item md-size-33" id="leftCol">
       <md-card>
         <md-card-media class="md-elevation-24">
@@ -165,6 +177,9 @@ export default {
     },
     addScore : function(){
       this.$addScore();
+      setTimeout(function(){
+        this.$confetti.stop()
+      }, 1000);
     },
     resetStreak : function(){
       this.$resetStreak();
@@ -250,12 +265,18 @@ export default {
       this.correct_sentence = SENTENCES[this.sentenceId]['correct_sentence']
     }
     this.startTimer()
+  },
+  destroyed() {
+    this.$confetti.stop();
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.banner {
+  color: #ffffff !important;
+}
 h3 {
   margin: 40px 0 0;
 }

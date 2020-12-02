@@ -5,24 +5,22 @@
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
-            <md-title md-alignment="centered">Misgender Me Not</md-title>
+            <span class="md-title">Misgender Me Not</span>
         </md-app-toolbar>
         <md-app-drawer :md-active.sync="menuVisible">
             <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
             <md-list>
                 <md-list-item>
                   <router-link to="/home">
-                    <md-icon>home</md-icon>
                     <span class="md-list-item-text">
-                      Home
+                      <md-icon>home</md-icon> Home
                     </span>
                   </router-link>
                 </md-list-item>
                 <md-list-item>
                   <router-link to="/home/resources">
-                    <md-icon>article</md-icon>
                     <span class="md-list-item-text">
-                      Resources
+                      <md-icon>article</md-icon> Resources
                     </span>
                   </router-link>
                 </md-list-item>

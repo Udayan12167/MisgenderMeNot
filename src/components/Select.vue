@@ -1,7 +1,7 @@
 <template>
     <div id="game1-config" class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
     <br>
-      <h1 style="color: white;"> Game 1 </h1>
+      <h1 class="md-display-2" style="color: white;">Pronoun Correction</h1>
         <div id = "checkbox" style="width: 48%; color: #435760; float: left; background: #73bd95;">
           <h2> Select the pronouns you want to practice: </h2>
           <input type="checkbox" id="He/Him/His" value="He/Him/His" v-model="checkedPronouns">
