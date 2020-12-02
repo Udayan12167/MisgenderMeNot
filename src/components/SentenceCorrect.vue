@@ -31,6 +31,20 @@
             </md-card-header>
           </md-card>
         </div>
+        <div class="md-layout-item md-size-50">
+          <md-button class="md-secondary md-dense md-raised"
+                     href="https://docs.google.com/forms/d/e/1FAIpQLSdG2h8seFA-p6YKInGpTjxXk69Vj8w49JCDcf_8gTvoZ2NaYg/viewform">
+            <md-icon>feedback</md-icon> Help us improve the game!
+          </md-button>
+        </div>
+        <div class="md-layout-item md-size-50">
+          <router-link to="/home/resources">
+            <md-button class="md-raised md-secondary"
+                       style="float: right;">
+              <md-icon>article</md-icon> Don't forget to checkout resources page!
+            </md-button>
+          </router-link>
+        </div>
       </div>
       <md-dialog-actions>
         <router-link to="/home/game1">
@@ -46,7 +60,14 @@
       </md-dialog-actions>
     </md-dialog>
     <div class="md-layout-item md-layout md-size-100 md-alignment-top-center banner"
-         style="height: 15vh;">
+      style="height: 10vh;">
+      <div class="md-layout-item md-size-100"
+           style="margin-bottom: 1vh; align: center;">
+        <img alt="Vue logo" src="/assets/logo.png" style="height: 10vh;">
+      </div>
+    </div>
+    <div class="md-layout-item md-layout md-size-100 md-alignment-top-center banner"
+         style="height: 13vh;">
       <div class="md-layout-item md-size-100"
           style="margin-bottom: 1vh; text-align: center;">
         <span class="md-display-2" style="color: white;">Pronoun Correction</span>
@@ -107,7 +128,7 @@
         </div>
       </div>
       <div class="md-layout-item md-size-100 md-layout md-gutter md-alignment-center-center">
-        <div class="md-layout-item md-size-20">
+        <div class="md-layout-item md-size-17">
           <md-card  class="md-primary" md-theme="orange-card" md-with-hover>
             <md-card-header>
               <md-card-header-text>
@@ -119,7 +140,7 @@
             </md-card-header>
           </md-card>
         </div>
-        <div class="md-layout-item md-size-20">
+        <div class="md-layout-item md-size-17">
           <md-card class="md-primary" md-theme="orange-card" md-with-hover>
             <md-card-header>
               <md-card-header-text>

@@ -1,6 +1,7 @@
 <template>
     <div id="game1-config" class="select" v-bind:style="{ backgroundColor: '#50ac7b'}" style="height: 500px">
     <br>
+      <img class="center" alt="Vue logo" src="/assets/logo.png" style="height: 10vh;">
       <h1 class="md-display-2" style="color: white;">Pronoun Correction</h1>
         <div id = "checkbox" style="width: 48%; color: #435760; float: left; background: #73bd95;">
           <h2> Select the pronouns you want to practice: </h2>
@@ -73,5 +74,10 @@ export default {
 .md-secondary {
   background-color: #9C27B0 !important;
   color: #ffffff !important;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
