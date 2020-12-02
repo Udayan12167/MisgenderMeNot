@@ -128,7 +128,7 @@
         </div>
       </div>
       <div class="md-layout-item md-size-100 md-layout md-gutter md-alignment-center-center">
-        <div class="md-layout-item md-size-17">
+        <div class="md-layout-item md-size-20">
           <md-card  class="md-primary" md-theme="orange-card" md-with-hover>
             <md-card-header>
               <md-card-header-text>
@@ -140,7 +140,7 @@
             </md-card-header>
           </md-card>
         </div>
-        <div class="md-layout-item md-size-17">
+        <div class="md-layout-item md-size-20">
           <md-card class="md-primary" md-theme="orange-card" md-with-hover>
             <md-card-header>
               <md-card-header-text>
