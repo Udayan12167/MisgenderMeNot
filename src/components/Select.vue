@@ -41,7 +41,7 @@
           <md-button v-on:click="difficulty = 2" class="md-raised md-accent" style="background-color: #fbc02d;">
             Medium
           </md-button>
-          <md-button v-on:click="difficulty = 3" class="md-raised md-accent" style="background-color: #f44336s;">
+          <md-button v-on:click="difficulty = 3" class="md-raised md-accent" style="background-color: #c74848 !important;">
             Hard
           </md-button>
 
