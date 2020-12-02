@@ -25,11 +25,9 @@
           <input type="checkbox" id="Ze/Zem/Zir" value="Ze/Zem/Zir" v-model="checkedPronouns">
           <label for="Ze/Zem/Zir">Ze/Zem/Zir</label>
           <br><br>
-          <input type="checkbox" id="No_pronouns" value="No_pronouns" v-model="checkedPronouns">
-          <label for="No_pronouns">No pronouns (names only)</label>
+          <input type="checkbox" id="No_pronouns" value="No pronouns (name only)" v-model="checkedPronouns">
+          <label for="No_pronouns">No pronouns (name only)</label>
           <br><br>
-
-          <span>Checked pronouns: {{ checkedPronouns }}</span>
       </div>
 
       <div id="level" style="margin-left: 52%;  background: #73bd95; color: #435760;">
@@ -44,8 +42,6 @@
           <md-button v-on:click="difficulty = 3" class="md-raised md-accent" style="background-color: #c74848 !important;">
             Hard
           </md-button>
-
-          <p> The selected level is {{ difficulty }} </p>
       </div>
 <br><br>
       <div id = "start">
@@ -67,13 +63,24 @@ export default {
     data: function()  {
       return {
           counter: 0,
-          checkedPronouns: [],
+          checkedPronouns: ["He/Him/His",
+                            "She/Her/Hers",
+                            "They/Them/Theirs",
+                            "Ze/Zem/Zir",
+                            "No pronouns (name only)"],
           difficulty: 0,
           sentence_id: 0
       }
     },
     mounted() {
       this.$resetScore();
+      this.$loadSentences();
+      this.$shuffleSentences();
+      console.log(this.sentences)
+    },
+    destroyed() {
+      this.$filterSentences(this.checkedPronouns);
+      console.log(this.sentences);
     }
 }
 </script>

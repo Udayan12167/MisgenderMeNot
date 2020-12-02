@@ -170,8 +170,6 @@
 </template>
 
 <script>
-import SENTENCES from '../resources/sentences_game_1.json'
-
 export default {
   name: 'SentenceCorrect',
   data: function() {
@@ -280,10 +278,10 @@ export default {
     console.log(this.sentenceId);
     this.imgSrc = this.randomImage();
     if (this.sentenceId !== undefined) {
-      console.log(SENTENCES.length);
-      this.incorrect_sentence = SENTENCES[this.sentenceId]['incorrect_sentence']
-      this.correct_pronoun = SENTENCES[this.sentenceId]['pronouns']
-      this.correct_sentence = SENTENCES[this.sentenceId]['correct_sentence']
+      console.log(this.sentences.length);
+      this.incorrect_sentence = this.sentences[this.sentenceId]['incorrect_sentence']
+      this.correct_pronoun = this.sentences[this.sentenceId]['pronouns']
+      this.correct_sentence = this.sentences[this.sentenceId]['correct_sentence']
     }
     this.startTimer()
   },

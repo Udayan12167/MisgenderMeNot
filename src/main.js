@@ -14,6 +14,7 @@ import './assets/theme.scss'
 import VueRouter from 'vue-router'
 import VueConfetti from 'vue-confetti'
 import Vuex from 'vuex'
+import SENTENCES from './resources/sentences_game_1.json'
 
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
@@ -25,7 +26,8 @@ const store = new Vuex.Store({
   state: {
     $score: 0,
     $streak: 0,
-    $maxStreak: 0
+    $maxStreak: 0,
+    $sentences: []
   },
   mutations: {
     add$score: function(state) {
@@ -42,7 +44,36 @@ const store = new Vuex.Store({
     },
     reset$streak: function(state) {
       state.$streak = 0;
-    } 
+    },
+    load$sentences: function(state) {
+      state.$sentences = [...SENTENCES];
+    },
+    shuffle$sentences: function(state) {
+      var currentIndex = state.$sentences.length, temporaryValue, randomIndex;
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = state.$sentences[currentIndex];
+        state.$sentences[currentIndex] = state.$sentences[randomIndex];
+        state.$sentences[randomIndex] = temporaryValue;
+      }
+    },
+    filter$sentences: function(state, pronounList) {
+      state.$sentences = state.$sentences.filter(
+        function (ele) {
+          var pronoun;
+          for (pronoun of pronounList) {
+            if(ele['pronouns'].toLowerCase().includes(pronoun.toLowerCase())) {
+              return true;
+            }
+          }
+          return false;
+      });
+    }
   }
 });
 
@@ -50,7 +81,8 @@ Vue.mixin({
   computed: {
     score: function() { return this.$store.state.$score },
     maxStreak: function() { return this.$store.state.$maxStreak },
-    streak: function() { return this.$store.state.$streak }
+    streak: function() { return this.$store.state.$streak },
+    sentences: function() { return this.$store.state.$sentences}
   },
   methods: {
     $addScore: function() {
@@ -61,6 +93,15 @@ Vue.mixin({
     },
     $resetStreak: function() {
       return this.$store.commit('reset$streak');
+    },
+    $loadSentences: function() {
+      return this.$store.commit('load$sentences');
+    },
+    $shuffleSentences: function() {
+      return this.$store.commit('shuffle$sentences')
+    },
+    $filterSentences: function(pronounList) {
+      return this.$store.commit('filter$sentences', pronounList);
     }
   },
 })
