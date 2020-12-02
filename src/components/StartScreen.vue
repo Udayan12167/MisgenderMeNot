@@ -15,6 +15,12 @@
           <md-icon>article</md-icon> Resources
         </md-button>
       </router-link>
+      <h4></h4>
+      <router-link to="/home/about">
+        <md-button class="md-raised md-secondary">
+          <md-icon>info</md-icon> About
+        </md-button>
+      </router-link>
     </div>
   </div>
 </template>

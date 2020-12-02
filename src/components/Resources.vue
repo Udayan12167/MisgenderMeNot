@@ -5,7 +5,7 @@
       style="height: 13vh;">
       <div class="md-layout-item md-size-100"
            style="margin-bottom: 1vh; align: center;">
-        <img alt="Vue logo" src="/assets/logo.png" style="height: 10vh;">
+        <img alt="Vue logo" src="/assets/logo.png" style="height: 13vh;">
       </div>
     </div>
     <div class="md-layout-item md-layout md-size-100 md-alignment-center-center banner"

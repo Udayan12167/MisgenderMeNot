@@ -24,6 +24,13 @@
                     </span>
                   </router-link>
                 </md-list-item>
+                <md-list-item>
+                  <router-link to="/home/about">
+                    <span class="md-list-item-text">
+                      <md-icon>info</md-icon> About
+                    </span>
+                  </router-link>
+                </md-list-item>
             </md-list>
         </md-app-drawer>
         <md-app-content md-theme="default" class="md-accent">

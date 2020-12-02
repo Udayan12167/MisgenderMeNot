@@ -5,6 +5,7 @@ import SentenceCorrect from './components/SentenceCorrect.vue'
 import StartScreen from './components/StartScreen.vue'
 import Select from './components/Select.vue'
 import Resources from './components/Resources.vue'
+import About from './components/About.vue'
 import NotFound from './components/NotFound.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
@@ -73,7 +74,8 @@ const router = new VueRouter({
         { path: 'play', component: Play },
         { path: 'game1', component: Select},
         { path: 'game1/sentence/:id', name: 'SentenceCorrect', component: SentenceCorrect},
-        {path: 'resources', component: Resources},
+        { path: 'resources', component: Resources},
+        { path: 'about', component: About },
         { path: "*", component: NotFound }
       ]
     },
