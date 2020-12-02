@@ -14,6 +14,7 @@ import './assets/theme.scss'
 import VueRouter from 'vue-router'
 import VueConfetti from 'vue-confetti'
 import Vuex from 'vuex'
+import createPersistedState from "vuex-persistedstate";
 import SENTENCES from './resources/sentences_game_1.json'
 
 Vue.config.productionTip = false
@@ -74,7 +75,8 @@ const store = new Vuex.Store({
           return false;
       });
     }
-  }
+  },
+  plugins: [createPersistedState()]
 });
 
 Vue.mixin({

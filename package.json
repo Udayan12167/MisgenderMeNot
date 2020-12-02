@@ -13,7 +13,8 @@
     "vue-confetti": "^2.2.1",
     "vue-material": "^1.0.0-beta-15",
     "vue-router": "^3.4.9",
-    "vuex": "^3.6.0"
+    "vuex": "^3.6.0",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
