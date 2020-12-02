@@ -5,7 +5,7 @@
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
                 <md-icon>menu</md-icon>
             </md-button>
-            <span class="md-title">Misgender Me Not</span>
+            <md-title md-alignment="centered">Misgender Me Not</md-title>
         </md-app-toolbar>
         <md-app-drawer :md-active.sync="menuVisible">
             <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
@@ -45,7 +45,7 @@ export default {
       menuVisible: false,
       transitionName: 'slide-fade'
     }
-  }
+  },
 }
 </script>
 

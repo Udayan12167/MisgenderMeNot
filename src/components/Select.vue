@@ -62,8 +62,10 @@ export default {
           difficulty: 0,
           sentence_id: 0
       }
+    },
+    mounted() {
+      this.$resetScore();
     }
-
 }
 </script>
 

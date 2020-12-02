@@ -2,6 +2,50 @@
   <div id="start"
        class="md-layout md-gutter md-alignment-center-center"
        style="margin-top: 20vh;">
+    <md-dialog :md-close-on-esc="false"
+               :md-click-outside-to-close="false"
+               :md-active.sync="showScore">
+      <md-dialog-title>Scorecard</md-dialog-title>
+      <div class="md-layout md-gutter md-alignment-center-center"
+           style="margin-left: 1vw; margin-right: 1vw;">
+        <div class="md-layout-item md-size-50">
+          <md-card  class="md-primary" md-theme="orange-card" md-with-hover>
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">Score</div>
+              </md-card-header-text>
+              <md-card-media>
+                <span class="md-display-1">{{ score }}</span>
+              </md-card-media>
+            </md-card-header>
+          </md-card>
+        </div>
+        <div class="md-layout-item md-size-50">
+          <md-card class="md-primary" md-theme="orange-card" md-with-hover>
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">Best Streak</div>
+              </md-card-header-text>
+              <md-card-media>
+                <span class="md-display-1">{{ maxStreak }}</span>
+              </md-card-media>
+            </md-card-header>
+          </md-card>
+        </div>
+      </div>
+      <md-dialog-actions>
+        <router-link to="/home/game1">
+          <md-button class="md-primary">
+            <md-icon>loop</md-icon> Retry
+          </md-button>
+        </router-link>
+        <router-link to="/home">
+          <md-button class="md-primary">
+            <md-icon>home</md-icon> Home
+          </md-button>
+        </router-link>
+      </md-dialog-actions>
+    </md-dialog>
     <div class="md-layout-item md-size-33" id="leftCol">
       <md-card>
         <md-card-media class="md-elevation-24">
@@ -13,8 +57,10 @@
       </md-chip>
     </div>
     <div class="md-layout-item md-layout md-gutter md-size-66">
-      <div class="md-layout-item">
-        <md-field>
+      <div class="md-layout-item md-size-100"
+           style="margin-bottom: 2vh;">
+        <div class="md-size-100"
+             style="margin-bottom: 2vh;">
           <md-card class="md-elevation-24">
             <md-ripple>
               <md-card-header>
@@ -25,8 +71,8 @@
               </md-card-content>
             </md-ripple>
           </md-card>
-        </md-field>
-        <md-field>
+        </div>
+        <div class="md-size-100">
           <md-card class="md-elevation-24">
             <md-ripple>
               <md-card-content>
@@ -46,7 +92,33 @@
               </md-card-actions>
             </md-ripple>
           </md-card>
-        </md-field>
+        </div>
+      </div>
+      <div class="md-layout-item md-size-100 md-layout md-gutter md-alignment-center-center">
+        <div class="md-layout-item md-size-20">
+          <md-card  class="md-primary" md-theme="orange-card" md-with-hover>
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">Score</div>
+              </md-card-header-text>
+              <md-card-media>
+                <span class="md-display-1">{{ score }}</span>
+              </md-card-media>
+            </md-card-header>
+          </md-card>
+        </div>
+        <div class="md-layout-item md-size-20">
+          <md-card class="md-primary" md-theme="orange-card" md-with-hover>
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">Streak</div>
+              </md-card-header-text>
+              <md-card-media>
+                <span class="md-display-1">{{ streak }}</span>
+              </md-card-media>
+            </md-card-header>
+          </md-card>
+        </div>
       </div>
     </div>
     <div class="md-layout-item md-size-66">
@@ -55,10 +127,11 @@
     <div class="md-layout-item md-size-20">
       <span class="md-display-1">{{ formattedTimeLeft }}</span>
     </div>
-    <div class="md-layout-item md-size-14" v-if="completed">
+    <div class="md-layout-item md-size-14">
       <router-link :to="`/home/game1/sentence/${(sentenceId+1)%15}`">
-        <md-button class="md-secondary md-dense md-raised submit-btn">Next <md-icon>keyboard_arrow_right</md-icon></md-button>
+        <md-button class="md-secondary md-dense md-raised" v-if="completed">Next <md-icon>keyboard_arrow_right</md-icon></md-button>
       </router-link>
+      <md-button class="md-secondary md-dense md-raised" v-on:click="gameComplete"><md-icon>highlight_off</md-icon>End Game</md-button>
     </div>
   </div>
 </template>
@@ -71,6 +144,7 @@ export default {
   data: function() {
     return {
       sentenceId: 0,
+      showScore: false,
       incorrect_sentence: `Placeholder incorrect sentence`,
       correct_sentence: `Placeholder correct sentence`,
       correct_pronoun: `They/Them/Their`,
@@ -89,10 +163,17 @@ export default {
     randomImage : function(){
       return `/assets/image-${Math.floor(Math.random() * (52 - 1) + 1)}.jpg`;
     },
+    addScore : function(){
+      this.$addScore();
+    },
+    resetStreak : function(){
+      this.$resetStreak();
+    },
     sentenceCheck : function(){
       if (this.correct_sentence === this.input_sentence) {
         this.sentenceIcon = `thumb_up_alt`;
         this.sentenceIconColor = `green`;
+        this.addScore();
         this.$confetti.start();
         this.finishedCorrect();
       } else {
@@ -104,10 +185,12 @@ export default {
       if (this.correct_sentence === this.input_sentence) {
         this.sentenceIcon = `thumb_up_alt`;
         this.sentenceIconColor = `green`;
+        this.addScore();
         this.$confetti.start();
       } else {
         this.sentenceIcon = `warning`;
         this.sentenceIconColor = `red`;
+        this.resetStreak();
       }
     },
     finishedCorrect() {
@@ -132,6 +215,10 @@ export default {
     },
     reload() {
       location.reload();
+    },
+    gameComplete() {
+      this.$confetti.start();
+      this.showScore = true;
     }
   },
   computed: {

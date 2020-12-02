@@ -1,9 +1,13 @@
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 
 @include md-register-theme("default", (
-  primary: md-get-palette-color(blue, A200), // The primary color of your application
+  primary: #9C27B0, // The primary color of your application
   accent: #50AC7B, // The accent or secondary color
   theme: "light"
+));
+
+@include md-register-theme("orange-card", (
+    primary: md-get-palette-color(orange, 500)
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme

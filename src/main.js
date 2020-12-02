@@ -12,19 +12,56 @@ import 'vue-material/dist/theme/default.css'
 import './assets/theme.scss'
 import VueRouter from 'vue-router'
 import VueConfetti from 'vue-confetti'
+import Vuex from 'vuex'
 
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
 Vue.use(VueConfetti)
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  state: {
+    $score: 0,
+    $streak: 0,
+    $maxStreak: 0
+  },
+  mutations: {
+    add$score: function(state) {
+      state.$streak += 1;
+      if (state.$streak>state.$maxStreak) {
+        state.$maxStreak = state.$streak;
+      }
+      state.$score += state.$streak;
+    },
+    reset$state: function(state) {
+      state.$streak = 0;
+      state.$maxStreak = 0;
+      state.$score = 0;
+    },
+    reset$streak: function(state) {
+      state.$streak = 0;
+    } 
+  }
+});
 
 Vue.mixin({
-  data: function() {
-    return {
-      score: 0,
-      multiplier: 0
+  computed: {
+    score: function() { return this.$store.state.$score },
+    maxStreak: function() { return this.$store.state.$maxStreak },
+    streak: function() { return this.$store.state.$streak }
+  },
+  methods: {
+    $addScore: function() {
+      return this.$store.commit('add$score');
+    },
+    $resetScore: function () {
+      return this.$store.commit('reset$state');
+    },
+    $resetStreak: function() {
+      return this.$store.commit('reset$streak');
     }
-  }
+  },
 })
 
 const router = new VueRouter({
@@ -45,6 +82,7 @@ const router = new VueRouter({
 })
 
 new Vue({
+  store: store,
   el: '#app',
   template: `
     <div id="app">
