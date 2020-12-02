@@ -161,7 +161,7 @@
       <span class="md-display-1">{{ formattedTimeLeft }}</span>
     </div>
     <div class="md-layout-item md-size-14">
-      <router-link :to="`/home/game1/sentence/${(sentenceId+1)%15}`">
+      <router-link :to="`/home/game1/sentence/${((sentenceId+1)%(sentences.length))}`">
         <md-button class="md-secondary md-dense md-raised" v-if="completed">Next <md-icon>keyboard_arrow_right</md-icon></md-button>
       </router-link>
       <md-button class="md-secondary md-dense md-raised" v-on:click="gameComplete"><md-icon>highlight_off</md-icon>End Game</md-button>
@@ -246,9 +246,6 @@ export default {
           this.finishedTimed();
         }
       }, 1000);
-    },
-    reload() {
-      location.reload();
     },
     gameComplete() {
       this.$confetti.start();
