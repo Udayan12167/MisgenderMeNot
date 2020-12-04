@@ -279,6 +279,9 @@ export default {
       this.incorrect_sentence = this.sentences[this.sentenceId]['incorrect_sentence']
       this.correct_pronoun = this.sentences[this.sentenceId]['pronouns']
       this.correct_sentence = this.sentences[this.sentenceId]['correct_sentence']
+      if (this.incorrect_sentence.split(' ').length >= 15) {
+        this.timeLimit = 50;
+      }
     }
     this.startTimer()
   },
