@@ -327,8 +327,8 @@
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "Their dog loved to play fetch, go on walks, and chase it's own tail.",
-    "correct_sentence": "Her dog loves to play fetch, go on walks, and chase it's own tail.",
+    "incorrect_sentence": "Their dog loved to play fetch, go on walks, and chase its own tail.",
+    "correct_sentence": "Her dog loves to play fetch, go on walks, and chase its own tail.",
     "pronouns": "he/him/his"
   },
 {
