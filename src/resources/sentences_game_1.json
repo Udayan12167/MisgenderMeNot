@@ -156,7 +156,7 @@
     "correct_sentence": "Alex is a great listener, really good with empathy vs sympathy and all that, but Alex hates people.",
     "pronouns": "Alex/no pronouns (name only)"
   },{
-    "incorrect_sentence": "She says she has the ability to hear the soundtrack of your life.",
+    "incorrect_sentence": "She says that she has the ability to hear the soundtrack of your life.",
     "correct_sentence": "Jevon says that Jevon has the ability to hear the soundtrack of your life.",
     "pronouns": "Jevon/no pronouns (name only)"
   },{
@@ -227,8 +227,8 @@
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "Although they had never been caught before he and his brother whispered quietly to each other.",
-    "correct_sentence": "Although they had never been caught before she and her brother whispered quietly to each other.",
+    "incorrect_sentence": "Although the two had never been caught before he and his brother whispered quietly to each other.",
+    "correct_sentence": "Although the two had never been caught before she and her brother whispered quietly to each other.",
     "pronouns": "she/her/hers"
   },
 {
@@ -242,12 +242,12 @@
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "He never told them the reason for his absence, and they never asked him.",
-    "correct_sentence": "She never told them the reason for her absence, and they never asked her.",
+    "incorrect_sentence": "He never told them the reason for his absence, and the moms never asked him.",
+    "correct_sentence": "She never told them the reason for her absence, and the moms never asked her.",
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "With nothing to do he idly scrolled through her phone and took pictures of himself.",
+    "incorrect_sentence": "With nothing to do he idly scrolled through his phone and took pictures of himself.",
     "correct_sentence": "With nothing to do she idly scrolled through her phone and took pictures of herself.",
     "pronouns": "she/her/hers"
   },
@@ -257,13 +257,13 @@
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "The sun shone through his window, raising him from his slumber.",
+    "incorrect_sentence": "The sun shone through their window, raising zem from zir slumber.",
     "correct_sentence": "The sun shone through her window, raising her from her slumber.",
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "Their car had broken down so he decided to drive them to the airport himself.",
-    "correct_sentence": "Their car had broken down so she decided to drive them to the airport herself.",
+    "incorrect_sentence": "The car had broken down so he decided to drive to the airport himself.",
+    "correct_sentence": "The car had broken down so she decided to drive to the airport herself.",
     "pronouns": "she/her/hers"
   },
 {
@@ -272,8 +272,8 @@
     "pronouns": "she/her/hers"
   },
 {
-    "incorrect_sentence": "He and his friends were planning their graduation party themselves.",
-    "correct_sentence": "She and her friends were planning their graduation party themselves.",
+    "incorrect_sentence": "Ze and zir friends were planning the graduation party themselves.",
+    "correct_sentence": "She and her friends were planning the graduation party themselves.",
     "pronouns": "she/her/hers"
   },
 {
@@ -317,32 +317,32 @@
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "She couldn't remember which drink was hers and which one was theirs.",
-    "correct_sentence":"He couldn't remember which drink was his and which one was theirs." ,
+    "incorrect_sentence": "She couldn't remember which drink was hers and which one was for Alex.",
+    "correct_sentence":"He couldn't remember which drink was his and which one was for Alex." ,
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "She tried her best but she didn't succeed.",
+    "incorrect_sentence": "Ze tried zir best but ze didn't succeed.",
     "correct_sentence": "He tried his best but he didn't succeed.",
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "His dog loved to play fetch, go on walks, and chase his own tail.",
-    "correct_sentence": "Her dog loves to play fetch, go on walks, and chase his own tail.",
+    "incorrect_sentence": "Their dog loved to play fetch, go on walks, and chase it's own tail.",
+    "correct_sentence": "Her dog loves to play fetch, go on walks, and chase it's own tail.",
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "Whenever she ordered burritos for her and her girlfriend she always forgot to get no cheese on hers",
-    "correct_sentence": "Whenever he ordered burritos for him and his girlfriend he always forgot to get no cheese on hers.",
+    "incorrect_sentence": "Whenever she ordered burritos for her and her girlfriend she always forgot to get no cheese.",
+    "correct_sentence": "Whenever he ordered burritos for him and his girlfriend he always forgot to get no cheese.",
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "When doing laundry she found some loose change in her jeans pocket.",
+    "incorrect_sentence": "When doing laundry they found some loose change in their jeans pocket.",
     "correct_sentence": "When doing laundry he found some loose change in his jeans pocket.",
     "pronouns": "he/him/his"
   },
 {
-    "incorrect_sentence": "She reached with desperation for the charging cable as her phone's battery icon blinked ominously.",
+    "incorrect_sentence": "Ze reached with desperation for the charging cable as zir phone's battery icon blinked ominously.",
     "correct_sentence": "He reached with desperation for the charging cable as his phone's battery icon blinked ominously.",
     "pronouns": "he/him/his"
   }
