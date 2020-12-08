@@ -33,13 +33,25 @@
       <div id="level" style="margin-left: 52%;  background: #73bd95; color: #435760;">
       <hr style="height:2px; visibility:hidden;" />
       <h2> Chose your difficulty </h2>
-          <md-button v-on:click="difficulty = 1" class="md-raised md-accent" style="background-color: #4caf50;">
+          <md-button v-on:click="difficulty = 1"
+                     class="md-accent"
+                     style="background-color: #4caf50;"
+                     :class="{'md-raised': highlightEasy}"
+                     :style="[highlightEasy? {'color': 'white'} : {'color': 'gray'}]">
             Easy
           </md-button>
-          <md-button v-on:click="difficulty = 2" class="md-raised md-accent" style="background-color: #fbc02d;">
+          <md-button v-on:click="difficulty = 2"
+                     class="md-accent"
+                     style="background-color: #fbc02d;"
+                     :class="{'md-raised': highlightMedium}"
+                     :style="[highlightMedium? {'color': 'white'} : {'color': 'gray'}]">
             Medium
           </md-button>
-          <md-button v-on:click="difficulty = 3" class="md-raised md-accent" style="background-color: #c74848 !important;">
+          <md-button v-on:click="difficulty = 3"
+                     class="md-accent"
+                     style="background-color: #c74848 !important;"
+                     :class="{'md-raised': highlightHard}"
+                     :style="[highlightHard? {'color': 'white'} : {'color': 'gray'}]">
             Hard
           </md-button>
       </div>
@@ -70,6 +82,17 @@ export default {
                             "No pronouns (name only)"],
           difficulty: 0,
           sentence_id: 0
+      }
+    },
+    computed: {
+      highlightEasy() {
+        return this.difficulty == 1;
+      },
+      highlightMedium() {
+        return this.difficulty == 2;
+      },
+      highlightHard() {
+        return this.difficulty == 3;
       }
     },
     mounted() {

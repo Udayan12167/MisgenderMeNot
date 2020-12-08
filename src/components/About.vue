@@ -25,7 +25,11 @@
                   <div class="md-headline">Motivation</div>
                 </md-card-header>
                 <md-card-content>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                  In their seminal work “Doing Gender” West and Zimmerman show that gender is a situated interactional accomplishment and how naturalized gender binaries are constantly reproduced in various interactional settings.
+                   Social network sites (SNSs) have emerged as one of the key interactional sites of contemporary times.
+                   The problem that we are focused on is the act of misgendering on social media. Misgendering is the action of referring to someone using a word (i.e. pronoun) that does not reflect their gender identity.
+                   This is a problem because misgendering has been shown to create a barrier for full participation in society due to discrimination in gendered spaces.
+                   Minimizing instances of misgendering or addressing misgendering can, for one, build community. When everyone is able to contribute, it creates a more diverse network where collaboration and interactions are encouraged.
                 </md-card-content>
               </md-card>
             </div>
