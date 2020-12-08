@@ -86,7 +86,7 @@
         </md-card-media>
       </md-card>
       <md-chip class="md-secondary md-elevation-24">
-        <md-icon>favorite</md-icon>{{ correct_pronoun }}
+        <span class="md-subheading"><md-icon>favorite</md-icon>{{ correct_pronoun }}</span>
       </md-chip>
     </div>
     <div class="md-layout-item md-layout md-gutter md-size-66">
@@ -112,7 +112,7 @@
                 <md-field>
                   <md-icon v-bind:style="{ 'color': sentenceIconColor}">{{ sentenceIcon }}</md-icon>
                   <label>Enter your answer here</label>
-                  <md-input v-model="input_sentence" md-autogrow :disabled="completed"></md-input>
+                  <md-input v-model="input_sentence" md-autogrow :disabled="completed" @keyup.enter.native="sentenceCheck"></md-input>
                 </md-field>
                 <md-field v-if="showCorrectSentence">
                   <md-icon style="color: green;">check</md-icon>
