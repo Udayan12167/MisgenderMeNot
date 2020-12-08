@@ -11,23 +11,26 @@
             <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
             <md-list>
                 <md-list-item>
-                  <router-link to="/home">
+                  <router-link exact to="/home">
+                    <md-icon>home</md-icon> 
                     <span class="md-list-item-text">
-                      <md-icon>home</md-icon> Home
+                      Home
                     </span>
                   </router-link>
                 </md-list-item>
                 <md-list-item>
-                  <router-link to="/home/resources">
+                  <router-link exact to="/home/resources">
+                    <md-icon>article</md-icon> 
                     <span class="md-list-item-text">
-                      <md-icon>article</md-icon> Resources
+                      Resources
                     </span>
                   </router-link>
                 </md-list-item>
                 <md-list-item>
-                  <router-link to="/home/about">
+                  <router-link exact to="/home/about">
+                    <md-icon>info</md-icon> 
                     <span class="md-list-item-text">
-                      <md-icon>info</md-icon> About
+                      About
                     </span>
                   </router-link>
                 </md-list-item>
